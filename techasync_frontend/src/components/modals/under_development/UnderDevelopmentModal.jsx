@@ -44,7 +44,7 @@ const UnderDevelopmentModal = () => {
         <DialogBody divider className=" pt-4 pb-16">
           <CountDownTimer></CountDownTimer>
 
-          <p className="text-justify font-poppins text-gray-800 font-semibold">
+          <p className="text-center font-poppins text-gray-800 font-semibold">
             Something amazing is brewing at our company. We are integrating
             several awesome features with this web application. These features
             will be live as soon as they are integrated. We apologize for any

@@ -1,11 +1,19 @@
 import React from "react";
 import FlipNumbers from "react-flip-numbers";
 
-const Digit = ({ digit, timeUnit }) => (
+const Digit = ({ digit, timeUnit, t }) => (
   <div className="flex flex-col items-center">
     <div className="relative p-4">
-      <div className="absolute left_divider w-1/2 h-full top-0 left-0"></div>
-      <div className="absolute right_divider w-1/2 h-full top-0 right-0"></div>
+      <div
+        className={`absolute ${
+          t ? "left_divider-t" : "left_divider"
+        }  w-1/2 h-full top-0 left-0`}
+      ></div>
+      <div
+        className={`absolute ${
+          t ? "right_divider-t" : "right_divider"
+        }  w-1/2 h-full top-0 right-0`}
+      ></div>
       <FlipNumbers
         play
         color="#fff"

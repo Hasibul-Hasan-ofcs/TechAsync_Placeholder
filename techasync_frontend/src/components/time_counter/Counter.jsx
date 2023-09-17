@@ -2,7 +2,7 @@ import moment from "moment";
 import React, { useEffect, useState } from "react";
 import Digit from "./Digit";
 
-const Counter = ({ timeEnd }) => {
+const Counter = ({ timeEnd, t }) => {
   const today = moment();
   const deadline = moment(timeEnd, "YYYY-MM-DD", true);
 
@@ -32,10 +32,10 @@ const Counter = ({ timeEnd }) => {
 
   return (
     <div className="flex gap-5 flex-wrap justify-center">
-      <Digit digit={time[0]} timeUnit="Days" />
-      <Digit digit={time[1]} timeUnit="Hours" />
-      <Digit digit={time[2]} timeUnit="Minutes" />
-      <Digit digit={time[3]} timeUnit="Seconds" />
+      <Digit digit={time[0]} timeUnit="Days" t={t} />
+      <Digit digit={time[1]} timeUnit="Hours" t={t} />
+      <Digit digit={time[2]} timeUnit="Minutes" t={t} />
+      <Digit digit={time[3]} timeUnit="Seconds" t={t} />
     </div>
   );
 };

@@ -1,0 +1,46 @@
+.neonic_background_main {
+  position: relative;
+}
+
+.neonic_background_main::before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  height: 150%;
+  aspect-ratio: 1/1;
+  border-radius: 500px;
+  background: radial-gradient(#392f7c, #040308);
+  filter: blur(3rem);
+}
+
+.neonic_background_secondary {
+  position: relative;
+}
+
+.neonic_background_secondary::before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translate(0%, 70%);
+  height: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 500px;
+  background: radial-gradient(#201324, #040308);
+  filter: blur(3rem);
+}
+
+.neonic_background_secondary::after {
+  content: "";
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+  transform: translate(0%, 70%);
+  height: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 500px;
+  background: radial-gradient(#1a1e3b, #040308);
+  filter: blur(3rem);
+}

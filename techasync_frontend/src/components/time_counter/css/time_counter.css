@@ -6,6 +6,14 @@
   background: #1d1d1d;
 }
 
+.left_divider-t,
+.right_divider-t {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5.6px);
+  -webkit-backdrop-filter: blur(5.6px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 .h-200per {
   height: 200%;
 }

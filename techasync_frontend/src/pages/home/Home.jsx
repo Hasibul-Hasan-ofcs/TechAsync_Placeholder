@@ -6,6 +6,7 @@ import Header from "../../components/header/Header";
 import Footer from "./../../components/footer/Footer";
 import OurServices from "./../../components/services/OurServices";
 import Contact from "../../components/contact/Contact";
+import style from "./css/home.module.css";
 
 const Home = () => {
   const { welcomeLoader, setWelcomeLoader } = useContext(MainContext);
@@ -17,7 +18,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="min-h-[100vh] relative flex flex-col justify-between">
+    <div className={`min-h-[100vh] relative flex flex-col justify-between`}>
       {welcomeLoader && <WelcomeLoaderModal></WelcomeLoaderModal>}
       <UnderDevelopmentModal></UnderDevelopmentModal>
       <Header></Header>
