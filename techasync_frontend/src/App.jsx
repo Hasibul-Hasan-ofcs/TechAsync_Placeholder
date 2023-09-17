@@ -1,11 +1,12 @@
 import { useState } from "react";
 import "./App.css";
 import { Button } from "@material-tailwind/react";
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
-    <div className="h-[100vh] flex items-center justify-center">
-      <Button>Getting Started</Button>
+    <div className="min-h-[100vh]">
+      <Outlet />
     </div>
   );
 }
