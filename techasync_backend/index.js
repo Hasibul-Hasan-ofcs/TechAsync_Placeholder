@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+require("dotenv").config();
 const { MongoClient, ServerApiVersion } = require("mongodb");
 
 // environment variables
@@ -13,6 +14,8 @@ const app = express();
 // middlewares
 app.use(cors());
 app.use(express.json());
+
+console.log(dbPassword, dbUsername);
 
 const mongo_conn_uri = `mongodb+srv://${dbUsername}:${dbPassword}@techasyncmain.bey4qfo.mongodb.net/?retryWrites=true&w=majority`;
 
@@ -29,15 +32,22 @@ async function run() {
     console.log(
       "Pinged your deployment. You successfully connected to MongoDB!"
     );
+
+    const servicesCollection = client.db("services").collection("allservices");
+
+    app.get("/services", async (req, res) => {
+      const cursor = servicesCollection.find();
+      const servicesData = await cursor.toArray();
+      console.log(servicesData);
+      res.send(servicesData);
+    });
+
+    //
   } finally {
     console.log("finally block");
   }
 }
 run().catch(console.dir);
-
-app.get("/", (req, res) => {
-  res.send("Welcome to TechAsync project");
-});
 
 app.listen(port, () => {
   console.log(`TechAsync Server-side app listening on port ${port}`);

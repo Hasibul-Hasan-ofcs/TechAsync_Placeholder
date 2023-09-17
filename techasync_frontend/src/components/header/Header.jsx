@@ -6,7 +6,7 @@ import Hero from "./hero/Hero";
 const header = () => {
   return (
     <div
-      className={`min-h-[100vh] bg-[#040308] overflow-hidden ${style.neonic_background_main}`}
+      className={`min-h-[140vh] md:min-h-[100vh] overflow-hidden ${style.neonic_background_main}`}
     >
       <div className={`h-[100vh] ${style.neonic_background_secondary}`}>
         <NavigationBar></NavigationBar>

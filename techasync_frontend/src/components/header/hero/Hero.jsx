@@ -4,7 +4,7 @@ import CountDownTimer from "./../../time_counter/CountDownTimer";
 
 const Hero = () => {
   return (
-    <div>
+    <div className="flex flex-col justify-center items-center flex-grow">
       <div className="pt-10">
         <CountDownTimer t={true}></CountDownTimer>
       </div>

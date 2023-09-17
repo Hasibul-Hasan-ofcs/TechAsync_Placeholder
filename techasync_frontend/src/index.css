@@ -37,3 +37,33 @@ html {
   -webkit-backdrop-filter: blur(5.6px);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
+
+.neon_common_effect {
+  position: relative;
+}
+
+.neon_common_effect::before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 500px;
+  background: radial-gradient(#392f7c, #040308);
+  filter: blur(3rem);
+}
+
+.neon_common_effect::after {
+  content: "";
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+  transform: translate(50%, 50%);
+  height: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 500px;
+  background: radial-gradient(#1a1e3b, #040308);
+  filter: blur(3rem);
+}
