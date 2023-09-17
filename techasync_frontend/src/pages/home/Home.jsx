@@ -2,6 +2,10 @@ import React, { useContext, useEffect } from "react";
 import { MainContext } from "../../context/MainContextProvider";
 import WelcomeLoaderModal from "../../components/welcome_items/welcomeLoader/WelcomeLoaderModal";
 import UnderDevelopmentModal from "../../components/modals/under_development/UnderDevelopmentModal";
+import Header from "../../components/header/Header";
+import Footer from "./../../components/footer/Footer";
+import OurServices from "./../../components/services/OurServices";
+import Contact from "../../components/contact/Contact";
 
 const Home = () => {
   const { welcomeLoader, setWelcomeLoader } = useContext(MainContext);
@@ -13,9 +17,13 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="min-h-[100vh] relative">
+    <div className="min-h-[100vh] relative flex flex-col justify-between">
       {welcomeLoader && <WelcomeLoaderModal></WelcomeLoaderModal>}
       <UnderDevelopmentModal></UnderDevelopmentModal>
+      <Header></Header>
+      <OurServices></OurServices>
+      <Contact></Contact>
+      <Footer></Footer>
     </div>
   );
 };
